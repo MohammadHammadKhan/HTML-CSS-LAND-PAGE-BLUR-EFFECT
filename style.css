@@ -12,6 +12,7 @@ body{
 .showcase::after{
     content: '';
     height: 100vh;
+    /* z-index: 2; */
     width: 100%;
     background-image: url(https://image.ibb.co/gzOBup/showcase.jpg);
     background-size: cover;
@@ -74,4 +75,75 @@ body{
     text-align: center;
     padding: 2.2rem;
     /* margin: 2.2rem; */
+}
+
+
+@media(max-width:560px){
+    .showcase::after{
+        height: 50vh;
+    }
+
+    .showcase .logo{
+        width: 90px;
+        height: 90px;
+    }
+
+    .content{
+        position: absolute;
+        z-index: 1;
+        top: 0%;
+        margin-top: 10%;
+    }
+
+    .content .text{
+        visibility: hidden;
+    }
+
+    .services{
+        
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 60px;
+        /* background-color: #333; */
+
+        
+    }
+
+    .about-us{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    .services div{
+        border-bottom: 1px white dashed;
+    padding-bottom: 1.2rem 1rem;
+    }
+
+    .about-us div{
+        padding-bottom: 2.2rem;
+    }
+
+    .services i,.services h3,.services p{
+        margin-bottom: 20px;
+    }
+
+    
+
+}
+
+@media(max-height:500px){
+    .content .title,.content .text{
+        display: none;
+    }
+
+    .content{
+        margin-top: 5%;
+    }
 }
